@@ -16,7 +16,7 @@ class Scale(T.BaseTransform):
         self.s = factor
         super().__init__()
 
-    def __call__(self, data):
+    def forward(self, data):
         x, y = data
         return x*self.s, y*self.s
 
